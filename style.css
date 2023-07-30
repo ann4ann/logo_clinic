@@ -1,0 +1,66 @@
+@import "./normalize.css";
+@import "./includes/appoitmentForm/appointmentForm.css";
+@import "./includes/header/header.css";
+@import "./includes/offer/offer.css";
+@import "./includes/checkup/checkup.css";
+@import "./includes/footer/footer.css";
+
+:root {
+    --text-primary: #364844;
+    --text-secondary: #868686;
+    --text-light: #e1e1e1;
+    --white: #fff;
+    --transperent: rgba(0, 0, 0, 0);
+    --bg-accent: #1FA181;
+    --bg-accent-transperent: #1fa180e6;
+    --bg-primary: #e2f0ef;
+    --bg-secondary: #f8fBfa;
+    --accent: #0dbc91;
+    --accent-light: #00D29F;
+    --accent-dark: #08664F;
+}
+
+body {
+    font-family: PT Sans Caption, sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    background-color: var(--white);
+}
+
+.btn {
+    font-size: 14px;
+    line-height: 21px;
+    border-radius: 50px;
+    outline: none;
+    transition: background-color, color ease-in .3s;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .btn {
+        padding: 11px 13px;
+    }
+}
+@media (min-width: 768px) {
+    .btn {
+        padding: 11px 23px;
+        min-width: 196px;
+    }
+}
+.button-primary {
+    color: #FFF;
+    background-color: var(--accent);
+    border: none;
+}
+.button-primary:hover {
+    background-color: var(--accent-light);
+}
+.button-secondary {
+    color: var(--accent);
+    background-color: var(--transperent);
+    border: 1px solid var(--accent);
+}
+.button-secondary:hover {
+    background-color: var(--accent);
+    color: var(--white)
+}
+

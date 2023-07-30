@@ -1,0 +1,225 @@
+.checkup-block {
+}
+.checkup-block__info {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.checkup-block__pagination {
+    max-width: 170px;
+}
+.checkup-block__pagination {
+    margin: 0 auto;
+    height: 34px;
+}
+@media (max-width: 767px) {
+    .checkup-block__pagination {
+        margin-top: 22px;
+        margin-bottom: 35px;
+    }
+}
+@media (min-width: 768px) {
+    .checkup-block__pagination {
+        margin-top: 34px;
+        margin-bottom: 92px;
+    }
+}
+
+.checkup {
+    background-color: var(--bg-primary);
+}
+.checkup-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .checkup {
+        margin: 0 18px;
+    }
+    .checkup-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* IMAGE */
+.checkup__img {
+    overflow: hidden;
+}
+.checkup__img > img {
+    object-fit: cover;
+}
+@media (max-width: 767px) {
+    .checkup__img {
+        max-height: 169px;
+        max-width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .checkup__img {
+        align-self: stretch;
+    }
+    .checkup__img > img {
+        min-height: 100%;
+
+        -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 24% 100%);
+        clip-path: polygon(7% 0, 100% 0, 100% 100%, 24% 100%);
+    }
+}
+
+/* CONTENT-BLOCK */
+@media (max-width: 768px) {
+    .checkup__info {
+        margin: 22px 23px 42px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .checkup__info {
+        order: -1;
+        margin-left: 23px;
+        margin-top: 53px;
+        margin-bottom: 56px;
+    }
+}
+@media (min-width: 1200px) {
+    .checkup__info {
+        order: -1;
+        margin-left: 63px;
+        margin-top: 53px;
+        margin-bottom: 56px;
+    }
+}
+
+
+/* CONTENT */
+.checkup-info {
+}
+.checkup-info__title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.checkup-info__subtitle {
+    font-weight: 700;
+}
+@media (max-width: 767px) {
+    .checkup-info__title {
+        font-size: 26px;
+        line-height: 34px;
+        margin-bottom: 5px;
+    }
+    .checkup-info__subtitle {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    .checkup-info__text {
+        margin-bottom: 17px;
+    }
+    .checkup-info__text > li:not(:first-child) {
+        margin-top: 8px;
+    }
+    .checkup-info__text > li {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media (min-width: 768px) {
+    .checkup-info__title {
+        margin-top: 0;
+        margin-bottom: 2px;
+        font-size: 38px;
+        line-height: 49px;
+    }
+    .checkup-info__subtitle {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+    .checkup-info__text {
+        margin-bottom: 33px;
+    }
+    .checkup-info__text > li:not(:first-child) {
+        margin-top: 9px;
+    }
+    .checkup-info__text > li {
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+
+/* LIST-STYLE */
+.checkup-info__text > li {
+    list-style: none;
+    margin-left: 16px;
+    position: relative;
+}
+.checkup-info__text > li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--bg-accent);
+    position: absolute;
+    left: -16px;
+    top: 0.6rem;
+    transform: translateY(-50%);
+}
+
+/* PRICE, ACTIONS */
+.checkup-info__price {
+    margin-bottom: 27px;
+}
+.strikethrough-text {
+    color: var(--text-secondary );
+    text-decoration: line-through;
+}
+.checkup-info__actions {
+    display: flex;
+    align-items: center;
+}
+.checkup-info__actions > button:not(:last-child) {
+    margin-right: 14px;
+}
+@media (max-width: 767px) {
+    .checkup-info__price {
+        font-size: 18px;
+    }
+    .strikethrough-text {
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 10px;
+    }
+    .checkup-info__actions {
+        justify-content: space-between;
+    }
+    .checkup-info__actions > button {
+        flex-grow: 1;
+    }
+}
+@media (min-width: 768px) {
+    .checkup-info__price {
+        font-size: 20px;
+    }
+    .strikethrough-text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 16px;
+    }
+}
+
+/* PAGINATION */
+.pagination {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination > a > svg {
+    width: 34px;
+    height: 34px;
+    fill: var(--text-light);
+    transition: fill ease-in .3s;
+}
+.pagination > a > svg:hover {
+    cursor: pointer;
+    fill: var(--accent);
+}
